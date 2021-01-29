@@ -1,5 +1,5 @@
 *{
-    padding: 0;
+    padding: 0px 0px 20px 0px;
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
@@ -35,6 +35,8 @@ nav ul li a{
     text-transform: uppercase;
 }
 nav ul li a:hover, a.active{
+    text-decoration: none;
+    color: white;
     background-color: #3352F2;
     border-radius: 5px;
 }
