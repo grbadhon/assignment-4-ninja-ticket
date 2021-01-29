@@ -1,5 +1,5 @@
 *{
-    padding: 0px 0px 20px 0px;
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
@@ -152,6 +152,7 @@ nav ul li a:hover, a.active{
 }
 #success-order{
     display: none;
+    
 }
 #nav-bar{
     margin-bottom: 50px;
