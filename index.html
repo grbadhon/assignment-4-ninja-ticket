@@ -35,20 +35,20 @@
                 <h3>Booking Flights</h3>
                 <div class="input-group">
                     <label for="">Flying From</label>
-                    <input class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
+                    <input id="flying-from-input" class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
                 </div>
                 <div class="input-group">
                     <label for="">Flying To</label>
-                    <input class="inp-style" type="text" name="" placeholder="New York, United States">
+                    <input id="flying-to-input" class="inp-style" type="text" name="" placeholder="New York, United States">
                 </div>
                 <div class="inputs">
                     <div class="input-group">
                         <label" for="">Departure</label>
-                            <input class="inp-style" type="date" name="">
+                            <input id="departure-date-input" class="inp-style" type="date" name="">
                     </div>
                     <div class="input-group">
                         <label for="">Return</label>
-                        <input class="inp-style" type="date" name="">
+                        <input id="return-date-input" class="inp-style" type="date" name="">
                     </div>
                 </div>
                 <div class="input-group f-class">
@@ -123,6 +123,42 @@
         
                     <h3>Order Summary</h3>
                 </div>
+            </div>
+            <div class="row">
+                <div class="col-md-7">
+                    <h6>Flying From:</h4>
+                </div>
+                <div class="col-md-5">
+                    <h6 id="confirmation-flying-from">Dhaka,Bangladesh</h6>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-md-7">
+                    <h6>Flying To:</h4>
+                </div>
+                <div class="col-md-5">
+                    <h6 id="confirmation-flying-to">New York,United States</h6>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-md-7">
+                    <h6>Departure date:</h4>
+                </div>
+                <div class="col-md-5">
+                    <h6 id="confirmation-departure-date">18/07/2021</h6>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-md-7">
+                    <h6>Return date:</h4>
+                </div>
+                <div class="col-md-5">
+                    <h6 id="confirmation-return-date">18/07/2022</h6>
+                </div>
+                
             </div>
             <div class="row">
                 <div class="col-md-12">
@@ -248,12 +284,20 @@
             }
 
 
-// book now button
+// book now button event starts here
 document.getElementById("book-button").addEventListener("click", function(){
     document.getElementById("booking-section").style.display='none';
     document.getElementById("success-order").style.display="block";
+    confirmationTextChange("flying-from-input","confirmation-flying-from");
+    confirmationTextChange("flying-to-input","confirmation-flying-to");
+    confirmationTextChange("departure-date-input","confirmation-departure-date");
+    confirmationTextChange("return-date-input","confirmation-return-date");
+    
 })
-
+function confirmationTextChange(inputFormId,confirmationFormId){
+    const inputFormText= document.getElementById(inputFormId).value;  
+    document.getElementById(confirmationFormId).innerText = inputFormText;
+}
 
 </script>
 
