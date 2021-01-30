@@ -143,8 +143,9 @@ nav ul li a:hover, a.active{
 #success-order{
     /* width: 40%; */
     background-color: white;
-    padding: 50px 0px;
+    padding: 50px 10px;
     border-radius: 10px;
+    box-shadow: 0px 10px 20px  #00FFFF;
     
 }
 #table-footer{
@@ -155,6 +156,7 @@ nav ul li a:hover, a.active{
 #success-order{
     display: none;
     
+    
 }
 #nav-bar{
     margin-bottom: 50px;
@@ -164,4 +166,7 @@ nav ul li a:hover, a.active{
   }
   .confirmation-text{
       padding-left: 15px;
+  }
+  .success-section{
+      margin-bottom: 50px;
   }
